@@ -64,6 +64,21 @@ body {
   background-repeat: no-repeat;
   min-height: 100vh; }
 
+.logo {
+  height: 3.25rem; }
+
+.serach__icon {
+  height: 2rem;
+  width: 2rem; }
+
+.user-nav__icon {
+  height: 2.25rem;
+  width: 2.25rem; }
+
+.user-nav__user-photo {
+  height: 3.25rem;
+  border-radius: 50%; }
+
 .container {
   width: 120rem;
   margin: 8rem auto;
