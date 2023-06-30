@@ -3,29 +3,80 @@
 
 .logo{
   height: 3.25rem;
+  margin-left:3rem ;
 }
 
 /////////////////////////////////
 /// SEARCH
-.serach{
-  &__input{}
-  &__button{}
+.search{
+  flex: 0 0 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__input{
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: var(--color-grey-light-3);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 100vmax;
+    width: 90%;
+    transition: width .4s ease;
+    margin-right: -3.25rem;
+    z-index: 1;
+    &:focus{
+      width: 100%;
+      outline: none;
+      background-color: var(--color-grey-light-4);
+    }
+
+    &::-webkit-input-placeholder{
+      font-weight: 100;
+      font-size: inherit;
+      color: var(--color-grey-light-4);
+    }
+  }
+
+  &__input:focus+&__button{
+    background-color: var(--color-grey-light-4);;
+  }
+
+  &__button{
+    border:none;
+    background-color: var(--color-grey-light-3);
+    z-index: 2;
+    &:focus{
+      outline: none;
+    }
+
+    &:active{
+      transform: translateY(2px);
+    }
+  }
   &__icon{
     height: 2rem;
     width: 2rem;
+    fill: var(--color-grey-dark-3);
+    // fill: red;
   }
 }
 
 /////////////////////////////////
 /// USER NAVIGATION
 .user-nav{
+  display: flex;
   &__icon-box{}
   &__icon{
     height: 2.25rem;
     width: 2.25rem;
   }
   &__notification{}
-  &__user{}
+  &__user{
+    display: flex;
+    flex-direction: column;
+  }
   &__user-photo{
 
     height:3.25rem ;

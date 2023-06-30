@@ -37,7 +37,7 @@ Grey dark 3: #999
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #999;
   --color-black:#000;
-  --color-white:#fff
+  --color-white:#fff;
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .5); }
 
 * {
@@ -65,19 +65,60 @@ body {
   min-height: 100vh; }
 
 .logo {
-  height: 3.25rem; }
-
-.serach__icon {
-  height: 2rem;
-  width: 2rem; }
-
-.user-nav__icon {
-  height: 2.25rem;
-  width: 2.25rem; }
-
-.user-nav__user-photo {
   height: 3.25rem;
-  border-radius: 50%; }
+  margin-left: 3rem; }
+
+.search {
+  flex: 0 0 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .search__input {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: var(--color-grey-light-3);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 100vmax;
+    width: 90%;
+    transition: width .4s ease;
+    margin-right: -3.25rem;
+    z-index: 1; }
+    .search__input:focus {
+      width: 100%;
+      outline: none;
+      background-color: var(--color-grey-light-4); }
+    .search__input::-webkit-input-placeholder {
+      font-weight: 100;
+      font-size: inherit;
+      color: var(--color-grey-light-4); }
+  .search__input:focus + .search__button {
+    background-color: var(--color-grey-light-4); }
+  .search__button {
+    border: none;
+    background-color: var(--color-grey-light-3);
+    z-index: 2; }
+    .search__button:focus {
+      outline: none; }
+    .search__button:active {
+      transform: translateY(2px); }
+  .search__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: var(--color-grey-dark-3); }
+
+.user-nav {
+  display: flex; }
+  .user-nav__icon {
+    height: 2.25rem;
+    width: 2.25rem; }
+  .user-nav__user {
+    display: flex;
+    flex-direction: column; }
+  .user-nav__user-photo {
+    height: 3.25rem;
+    border-radius: 50%; }
 
 .container {
   width: 120rem;
@@ -87,9 +128,13 @@ body {
   min-height: 50rem; }
 
 .header {
+  font-size: 1.4;
   height: 7rem;
   background-color: var(--color-grey-light-2);
-  border-bottom: var(--color-white); }
+  border-bottom: var(--color-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
 
 .content {
   display: flex; }
