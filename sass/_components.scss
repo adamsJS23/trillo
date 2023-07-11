@@ -115,3 +115,35 @@
   }
   
 }
+
+/////////////////////////////////
+/// NAVIGATION- SIDE BAR
+
+.side-nav{
+  
+  &__item{
+    list-style: none;
+    &:not(:last-child)
+    {
+      // margin-bottom: 2px;
+    }
+  }
+
+  &__link{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &__icon{
+    height: 2rem;
+    width: 2rem;
+    fill: currentColor;
+  }
+}
+
+.legal{
+  font-size: 2rem;
+  line-height: 1.6px;
+}
