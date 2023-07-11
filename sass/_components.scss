@@ -85,14 +85,14 @@
   &__icon-box {
     position: relative;
   }
-    
+
   &__icon {
     height: 2.25rem;
     width: 2.25rem;
     fill: var(--color-grey-dark-2);
   }
   &__notification {
-    font-size:.8rem ;
+    font-size: 0.8rem;
     height: 1.75rem;
     width: 1.75rem;
     border-radius: 50%;
@@ -107,43 +107,83 @@
     top: 1.5rem;
     right: 1.1rem;
   }
-  
+
   &__user-photo {
     height: 3.25rem;
     border-radius: 50%;
     margin-right: 1rem;
   }
-  
 }
 
 /////////////////////////////////
 /// NAVIGATION- SIDE BAR
 
-.side-nav{
-  
-  &__item{
-    list-style: none;
-    &:not(:last-child)
-    {
-      // margin-bottom: 2px;
+.side-nav {
+  font-size: 1.4rem;
+  list-style: none;
+  margin-top: 3.5rem;
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
     }
   }
 
-  &__link{
-    font-size: 1.8rem;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: inherit;
+  &__item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    background-color: var(--color-primary);
+    opacity: 0;
+    transform: scaleY(0);
+    // transform-origin: 0 ;
+    transition: transform 0.3s ease, width 0.2s cubic-bezier(1, 0, 0, 1) 0.3s, background-color .1s;
   }
 
-  &__icon{
-    height: 2rem;
-    width: 2rem;
+  &__item:hover::before,
+  &__item--active::before {
+    opacity: 1;
+    transform: scaleY(1);
+    width: 100%;
+  }
+
+  &__item:active::before{
+    background-color: var(--color-primary-light);
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      color: var(--color-grey-light-1);
+      font-size: 1.8rem;
+      padding: 1.5rem 3rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: block;
+      display: flex;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &__icon {
+    height: 1.75rem;
+    width: 1.75rem;
     fill: currentColor;
+    margin-right: 2rem;
   }
 }
 
-.legal{
-  font-size: 2rem;
-  line-height: 1.6px;
+/////////////////////////////////
+/// LEGAL
+
+.legal {
+  font-size: 1.2rem;
+  padding: 2.5rem;
+  text-align: center;
 }

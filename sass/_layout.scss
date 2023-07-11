@@ -5,6 +5,7 @@
   box-shadow:var(--shadow-dark);
   min-height: 50rem;
 }
+
 .header {
   font-size: 1.4;
   height: 7rem;
@@ -14,6 +15,7 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .content {
   display: flex;
 }
@@ -21,13 +23,15 @@
   background-color: var(--color-grey-dark-1);
   color: var(--color-white);
   flex: 0 0 18%;
-  // min-height: 50rem;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
 }
+
 .hotel-view {
   background-color: var(--color-white);
   background-color: cornflowerblue;
   flex: 1;
+  // Only for text
+  min-height: 50rem;
 }
