@@ -187,3 +187,68 @@
   padding: 2.5rem;
   text-align: center;
 }
+
+/////////////////////////////////
+/// HOTEL OVERVIEW
+
+.overview{
+  display: flex;
+  background-color: var(--color-grey-light-3);
+  padding-left: 2rem;
+
+  &__box-1{
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  &__name{
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+
+  &__stars{
+    margin-left: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &__box-2{
+    display: flex;
+    align-items: center;
+  }
+
+  &__location{
+    display: flex;
+    align-items: center;
+  }
+
+  &__link{
+    color: var(--color-primary);
+    text-decoration: none;
+    display: inline-block;
+    border-bottom:1px solid var(--color-primary) ;   
+  }
+
+  &__rating{
+    margin-left: 2rem;
+    text-align: center;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    align-self:stretch ;
+    padding: 1rem 1.5rem;
+  }
+
+  &__rate{
+    font-size: 2rem;
+    margin-bottom: .5rem;
+  }
+
+  &__icon{
+    height: 1.5rem;
+    width: 1.5rem;
+    fill: var(--color-primary);
+    line-height: 1px;
+  }
+}
