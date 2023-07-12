@@ -141,7 +141,8 @@
     opacity: 0;
     transform: scaleY(0);
     // transform-origin: 0 ;
-    transition: transform 0.3s ease, width 0.2s cubic-bezier(1, 0, 0, 1) 0.3s, background-color .1s;
+    transition: transform 0.3s ease, width 0.2s cubic-bezier(1, 0, 0, 1) 0.3s,
+      background-color 0.1s;
   }
 
   &__item:hover::before,
@@ -151,7 +152,7 @@
     width: 100%;
   }
 
-  &__item:active::before{
+  &__item:active::before {
     background-color: var(--color-primary-light);
   }
 
@@ -191,64 +192,96 @@
 /////////////////////////////////
 /// HOTEL OVERVIEW
 
-.overview{
+.overview {
   display: flex;
   background-color: var(--color-grey-light-3);
   padding-left: 2rem;
 
-  &__box-1{
+  &__box-1 {
     flex: 1;
     display: flex;
     align-items: center;
   }
 
-  &__name{
+  &__name {
     text-transform: uppercase;
     font-size: 2rem;
     font-weight: 400;
   }
 
-  &__stars{
+  &__stars {
     margin-left: 1.5rem;
     display: flex;
     align-items: center;
   }
 
-  &__box-2{
+  &__box-2 {
     display: flex;
     align-items: center;
   }
 
-  &__location{
+  &__location {
     display: flex;
     align-items: center;
+
+    &:hover {
+      animation: pulsate 1s infinite;
+    }
   }
 
-  &__link{
+  &__link {
     color: var(--color-primary);
     text-decoration: none;
     display: inline-block;
-    border-bottom:1px solid var(--color-primary) ;   
+    border-bottom: 1px solid var(--color-primary);
   }
 
-  &__rating{
+  &__rating {
     margin-left: 2rem;
     text-align: center;
     background-color: var(--color-primary);
     color: var(--color-white);
-    align-self:stretch ;
+    align-self: stretch;
     padding: 1rem 1.5rem;
   }
 
-  &__rate{
+  &__rate {
     font-size: 2rem;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
 
-  &__icon{
+  &__icon {
     height: 1.5rem;
     width: 1.5rem;
     fill: var(--color-primary);
     line-height: 1px;
+  }
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.15);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/////////////////////////////////
+/// GALLERY
+
+.gallery {
+  display: flex;
+  &__box {
+    flex: 0 0 33.3333%;
+  }
+  &__img {
+    width: 100%;
+    display: block;
   }
 }
