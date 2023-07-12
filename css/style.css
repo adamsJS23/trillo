@@ -38,7 +38,8 @@ Grey dark 3: #999
   --color-grey-dark-3: #999;
   --color-black:#000;
   --color-white:#fff;
-  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .5); }
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .5);
+  --shadow-light:0 1rem 2rem rgba($color: #000000, $alpha: 0.1); }
 
 * {
   margin: 0;
@@ -194,7 +195,7 @@ body {
 .overview {
   display: flex;
   background-color: var(--color-grey-light-3);
-  padding-left: 2rem; }
+  padding-left: 3rem; }
   .overview__box-1 {
     flex: 1;
     display: flex;
@@ -246,11 +247,77 @@ body {
 
 .gallery {
   display: flex; }
-  .gallery__box {
-    flex: 0 0 33.3333%; }
   .gallery__img {
     width: 100%;
     display: block; }
+
+.description-reviews {
+  display: flex;
+  font-size: 1.4rem; }
+
+.description {
+  flex: 0 0 60%;
+  margin: 3rem;
+  background-color: var(--color-grey-light-2);
+  box-shadow: var(--shadow-light); }
+  .description__text-box {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    padding: 3rem;
+    border-bottom: 1px solid var(--color-white); }
+  .description__text:not(:last-child) {
+    margin-bottom: 3rem; }
+  .description__list {
+    padding: 3rem;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; }
+  .description__item {
+    flex: 0 0 50%;
+    margin-bottom: 1rem;
+    position: relative; }
+  .description__item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(); }
+
+.reviews {
+  flex: 1;
+  margin: 3rem; }
+
+.review {
+  padding: 3rem;
+  background-color: var(--color-grey-light-2);
+  box-shadow: var(--shadow-light); }
+  .review:not(:last-child) {
+    margin-bottom: 3rem; }
+  .review__text {
+    margin-bottom: 2rem;
+    line-height: 1.6; }
+  .review__user-box {
+    display: flex;
+    align-items: center; }
+  .review__img {
+    width: 30%;
+    border-radius: 100%; }
+  .review__caption {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem; }
+  .review__user-name {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    text-transform: uppercase; }
+  .review__date {
+    font-size: 1.2rem; }
+  .review__rate {
+    margin-left: auto;
+    font-size: 2rem;
+    color: var(--color-primary); }
 
 .container {
   width: 120rem;

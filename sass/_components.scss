@@ -195,7 +195,7 @@
 .overview {
   display: flex;
   background-color: var(--color-grey-light-3);
-  padding-left: 2rem;
+  padding-left: 3rem;
 
   &__box-1 {
     flex: 1;
@@ -277,11 +277,112 @@
 
 .gallery {
   display: flex;
-  &__box {
-    flex: 0 0 33.3333%;
-  }
+  // &__box {
+  //   flex: 0 0 33.3333%;
+  // }
   &__img {
     width: 100%;
     display: block;
+  }
+}
+
+/////////////////////////////////
+/// DESCRIPTION & USER REVIEW
+.description-reviews {
+  display: flex;
+  font-size: 1.4rem;
+}
+
+.description {
+  flex: 0 0 60%;
+  margin: 3rem;
+  background-color: var(--color-grey-light-2);
+  box-shadow: var(--shadow-light);
+
+  &__text-box {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    padding: 3rem;
+    border-bottom: 1px solid var(--color-white);
+  }
+
+  &__text {
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__list {
+    padding: 3rem;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
+    flex: 0 0 50%;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+
+  &__item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url();
+  }
+}
+
+.reviews {
+  flex: 1;
+  margin: 3rem;
+}
+
+.review {
+  padding: 3rem;
+  background-color: var(--color-grey-light-2);
+  box-shadow: var(--shadow-light);
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+
+  &__text {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  &__user-box {
+    display: flex;
+    align-items: center;
+  }
+
+  &__img {
+    width: 30%;
+    border-radius: 100%;
+  }
+
+  &__caption {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+  }
+
+  &__user-name {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+
+  &__date {
+    font-size: 1.2rem;
+  }
+
+  &__rate {
+    margin-left: auto;
+    font-size: 2rem;
+    color: var(--color-primary);
   }
 }
