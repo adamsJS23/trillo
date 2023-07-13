@@ -117,43 +117,42 @@
           </div>
 
           <div class="overview">
-            <div class="overview__box-1">
-              <h1 class="overview__name">las palmas hotel</h1>
-              <div class="overview__stars">
-                <svg class="overview__icon overview__icon--star">
-                  <use xlinK:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="overview__icon overview__icon--star">
-                  <use xlinK:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="overview__icon overview__icon--star">
-                  <use xlinK:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="overview__icon overview__icon--star">
-                  <use xlinK:href="img/sprite.svg#icon-star"></use>
-                </svg>
-                <svg class="overview__icon overview__icon--star">
-                  <use xlinK:href="img/sprite.svg#icon-star"></use>
-                </svg>
-              </div>
+            <h1 class="overview__heading">las palmas hotel</h1>
+            <div class="overview__stars">
+              <svg class="overview__icon overview__icon--star">
+                <use xlinK:href="img/sprite.svg#icon-star"></use>
+              </svg>
+              <svg class="overview__icon overview__icon--star">
+                <use xlinK:href="img/sprite.svg#icon-star"></use>
+              </svg>
+              <svg class="overview__icon overview__icon--star">
+                <use xlinK:href="img/sprite.svg#icon-star"></use>
+              </svg>
+              <svg class="overview__icon overview__icon--star">
+                <use xlinK:href="img/sprite.svg#icon-star"></use>
+              </svg>
+              <svg class="overview__icon overview__icon--star">
+                <use xlinK:href="img/sprite.svg#icon-star"></use>
+              </svg>
             </div>
-            <div class="overview__box-2">
-              <div class="overview__location">
-                <svg class="overview__icon overview__icon--location">
-                  <use xlink:href="img/sprite.svg#icon-location-pin"></use>
-                </svg>
-                <a href="#" class="overview__link">Albufeira, Portugal</a>
-              </div>
-              <div class="overview__rating">
-                <p class="overview__rate">8.6</p>
-                <p class="overview__vote">429 votes</p>
-              </div>
+
+            <div class="overview__location">
+              <svg class="overview__icon overview__icon--location">
+                <use xlink:href="img/sprite.svg#icon-location-pin"></use>
+              </svg>
+              <button href="#" class="overview__btn-inline">
+                Albufeira, Portugal
+              </button>
+            </div>
+            <div class="overview__rating">
+              <div class="overview__rating-average">8.6</div>
+              <div class="overview__rating-count">429 votes</div>
             </div>
           </div>
 
           <!-- DESCRIPTION & USER REVIEWS -->
 
-          <div class="description-reviews">
+          <div class="detail">
             <div class="description">
               <div class="description__text-box">
                 <p class="description__text">
@@ -179,29 +178,72 @@
                 <li class="description__item">Pets allowed</li>
                 <li class="description__item">Perfect for families</li>
               </ul>
+
+              <div class="recommend">
+                <p class="recommend__text">
+                  Lucy and other 3 friends recommend this hotel
+                </p>
+                <div class="recommend__client-img-box">
+                  <img
+                    class="recommend__client-img"
+                    src="img/user-3.jpg"
+                    alt=" Hotel client photo"
+                  />
+                  <img
+                    class="recommend__client-img"
+                    src="img/user-4.jpg"
+                    alt=" Hotel client photo"
+                  />
+                  <img
+                    class="recommend__client-img"
+                    src="img/user-5.jpg"
+                    alt=" Hotel client photo"
+                  />
+                  <img
+                    class="recommend__client-img"
+                    src="img/user-6.jpg"
+                    alt=" Hotel client photo"
+                  />
+                </div>
+              </div>
             </div>
             <div class="reviews">
               <figure class="review">
                 <blockquote class="review__text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
+                  ipsum dolor sit amet consectetur adipisicing elit.
                 </blockquote>
                 <div class="review__user-box">
-                  <img class="review__img" src="img/user-1.jpg" alt="user image">
-                  <figcaption class="review__caption"><span class="review__user-name">John Doe</span><span class="review__date">Feb, 3rd 2017</span></figcaption>
+                  <img
+                    class="review__img"
+                    src="img/user-1.jpg"
+                    alt="user image"
+                  />
+                  <figcaption class="review__caption">
+                    <span class="review__user-name">John Doe</span
+                    ><span class="review__date">Feb, 3rd 2017</span>
+                  </figcaption>
                   <p class="review__rate">7.8</p>
-                 </div>
-                </figure>
-                
-              <figure class="review">
-                <blockquote>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Dolores cumque ipsam dignissimos ea a quibusdam! Nam adipisci
-                  voluptas reiciendis incidunt aperiam, cum, illum unde beatae
-                  et vero ad excepturi quod?
-                </blockquote>
+                </div>
+              </figure>
 
-                <figcaption></figcaption>
+              <figure class="review">
+                <blockquote class="review__text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
+                  ipsum dolor sit amet consectetur adipisicing elit.
+                </blockquote>
+                <div class="review__user-box">
+                  <img
+                    class="review__img"
+                    src="img/user-2.jpg"
+                    alt="user image"
+                  />
+                  <figcaption class="review__caption">
+                    <span class="review__user-name">Sarah Smith</span
+                    ><span class="review__date">Apr, 20th 2015</span>
+                  </figcaption>
+                  <p class="review__rate">9.2</p>
+                </div>
               </figure>
             </div>
           </div>

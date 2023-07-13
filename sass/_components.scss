@@ -190,23 +190,33 @@
 }
 
 /////////////////////////////////
+/// GALLERY
+
+.gallery {
+  display: flex;
+
+  &__img {
+    width: 100%;
+    display: block;
+  }
+}
+
+/////////////////////////////////
 /// HOTEL OVERVIEW
 
 .overview {
   display: flex;
+  align-items: center;
   background-color: var(--color-grey-light-3);
+  border-bottom: 1px solid var(--color-grey-light-2);
   padding-left: 3rem;
 
-  &__box-1 {
-    flex: 1;
-    display: flex;
-    align-items: center;
-  }
-
-  &__name {
+  &__heading {
     text-transform: uppercase;
-    font-size: 2rem;
-    font-weight: 400;
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding: 2rem 0;
   }
 
   &__stars {
@@ -215,87 +225,84 @@
     align-items: center;
   }
 
-  &__box-2 {
+  &__location {
+    margin-left: auto;
     display: flex;
     align-items: center;
   }
 
-  &__location {
-    display: flex;
-    align-items: center;
+  &__btn-inline {
+    border: none;
+    background-color: transparent;
+    color: var(--color-primary);
+    display: inline-block;
+    padding-bottom: 2px;
+    border-bottom: 1px solid currentColor;
+    cursor: pointer;
+    transition: all 0.5s;
 
     &:hover {
+      color: var(--color-grey-dark-1);
       animation: pulsate 1s infinite;
+    }
+
+    &:focus {
+      outline: none;
     }
   }
 
-  &__link {
-    color: var(--color-primary);
-    text-decoration: none;
-    display: inline-block;
-    border-bottom: 1px solid var(--color-primary);
+  &__icon--location {
+    margin-right: 0.5rem;
   }
 
   &__rating {
-    margin-left: 2rem;
+    margin-left: 3rem;
     text-align: center;
     background-color: var(--color-primary);
     color: var(--color-white);
     align-self: stretch;
-    padding: 1rem 1.5rem;
+    padding: 0rem 2.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
 
-  &__rate {
+  &__rating-average {
     font-size: 2rem;
-    margin-bottom: 0.5rem;
+    // margin-bottom: 0.5rem;
+    margin-bottom: -2px;
   }
 
   &__icon {
     height: 1.5rem;
     width: 1.5rem;
     fill: var(--color-primary);
-    line-height: 1px;
   }
 }
 
 @keyframes pulsate {
   0% {
     transform: scale(1);
+    box-shadow: none;
   }
 
   50% {
-    transform: scale(1.15);
+    transform: scale(1.05);
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25);
   }
 
   100% {
     transform: scale(1);
-  }
-}
-
-/////////////////////////////////
-/// GALLERY
-
-.gallery {
-  display: flex;
-  // &__box {
-  //   flex: 0 0 33.3333%;
-  // }
-  &__img {
-    width: 100%;
-    display: block;
+    box-shadow: none;
   }
 }
 
 /////////////////////////////////
 /// DESCRIPTION & USER REVIEW
-.description-reviews {
-  display: flex;
-  font-size: 1.4rem;
-}
 
 .description {
   flex: 0 0 60%;
-  margin: 3rem;
   background-color: var(--color-grey-light-2);
   box-shadow: var(--shadow-light);
 
@@ -317,6 +324,7 @@
     list-style: none;
     display: flex;
     flex-wrap: wrap;
+    border-bottom: 1px solid var(--color-white);
   }
   &__item {
     flex: 0 0 50%;
@@ -335,16 +343,16 @@
 
 .reviews {
   flex: 1;
-  margin: 3rem;
 }
 
 .review {
-  padding: 3rem;
+  margin-left: 4.5rem;
   background-color: var(--color-grey-light-2);
   box-shadow: var(--shadow-light);
+  padding: 3rem;
 
   &:not(:last-child) {
-    margin-bottom: 3rem;
+    margin-bottom: 4.5rem;
   }
 
   &__text {
@@ -369,10 +377,10 @@
   }
 
   &__user-name {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 700;
     line-height: 1.8;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
     text-transform: uppercase;
   }
 
@@ -384,5 +392,26 @@
     margin-left: auto;
     font-size: 2rem;
     color: var(--color-primary);
+  }
+}
+
+.recommend {
+  display: flex;
+  align-items: center;
+  padding: 3rem;
+  &__text {
+  }
+
+  &__client-img-box {
+    margin-left: 5rem;
+    display: flex;
+  }
+
+  &__client-img {
+    width: 4.2rem;
+    border-radius: 50%;
+    margin-right: -5px;
+    border: 3px solid var(--color-grey-light-2);
+    box-sizing: content-box;
   }
 }
