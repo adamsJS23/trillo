@@ -295,8 +295,7 @@ body {
 .recommend {
   display: flex;
   align-items: center;
-  font-size: 1.3rem;
-  padding-top: 3rem; }
+  font-size: 1.3rem; }
   .recommend__client-img-box {
     margin-left: auto;
     display: flex; }
@@ -318,16 +317,18 @@ body {
   .review__text {
     margin-bottom: 2rem;
     line-height: 1.6; }
-  .review__user-box {
+  .review__user {
     display: flex;
     align-items: center; }
-  .review__img {
-    width: 30%;
-    border-radius: 100%; }
-  .review__caption {
+  .review__user-box {
     display: flex;
     flex-direction: column;
-    margin-left: 1rem; }
+    align-items: center;
+    margin-left: 2rem; }
+  .review__photo {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%; }
   .review__user-name {
     font-size: 1.4rem;
     font-weight: 700;
@@ -336,7 +337,7 @@ body {
     text-transform: uppercase; }
   .review__date {
     font-size: 1.2rem; }
-  .review__rate {
+  .review__rating {
     margin-left: auto;
     font-size: 2rem;
     color: var(--color-primary); }
@@ -385,5 +386,5 @@ body {
   padding: 3rem;
   line-height: 1.8; }
 
-.reviews {
+.user-reviews {
   flex: 1; }

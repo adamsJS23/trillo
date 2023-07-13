@@ -346,9 +346,6 @@
   display: flex;
   align-items: center;
   font-size: 1.3rem;
-  padding-top: 3rem;
-  &__text {
-  }
 
   &__client-img-box {
     margin-left: auto;
@@ -382,20 +379,22 @@
     line-height: 1.6;
   }
 
-  &__user-box {
+  &__user {
     display: flex;
     align-items: center;
   }
-
-  &__img {
-    width: 30%;
-    border-radius: 100%;
-  }
-
-  &__caption {
+  
+  &__user-box {
     display: flex;
     flex-direction: column;
-    margin-left: 1rem;
+    align-items: center;
+    margin-left: 2rem;
+  }
+
+  &__photo {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
   }
 
   &__user-name {
@@ -410,7 +409,7 @@
     font-size: 1.2rem;
   }
 
-  &__rate {
+  &__rating {
     margin-left: auto;
     font-size: 2rem;
     color: var(--color-primary);
