@@ -2,7 +2,7 @@
   width: 120rem;
   margin: 8rem auto;
   background-color: var(--color-grey-light-1);
-  box-shadow:var(--shadow-dark);
+  box-shadow: var(--shadow-dark);
   min-height: 50rem;
 }
 
@@ -38,4 +38,16 @@
   display: flex;
   font-size: 1.4rem;
   padding: 4.5rem;
+}
+
+.description {
+  flex: 0 0 60%;
+  background-color: var(--color-grey-light-2);
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  line-height: 1.8;
+}
+
+.reviews {
+  flex: 1;
 }
