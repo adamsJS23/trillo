@@ -218,20 +218,6 @@ body {
     margin-left: auto;
     display: flex;
     align-items: center; }
-  .overview__btn-inline {
-    border: none;
-    background-color: transparent;
-    color: var(--color-primary);
-    display: inline-block;
-    padding-bottom: 2px;
-    border-bottom: 1px solid currentColor;
-    cursor: pointer;
-    transition: all 0.5s; }
-    .overview__btn-inline:hover {
-      color: var(--color-grey-dark-1);
-      animation: pulsate 1s infinite; }
-    .overview__btn-inline:focus {
-      outline: none; }
   .overview__icon--location {
     margin-right: 0.5rem; }
   .overview__rating {
@@ -252,6 +238,27 @@ body {
     height: 1.5rem;
     width: 1.5rem;
     fill: var(--color-primary); }
+
+.btn-inline {
+  border: none;
+  background-color: transparent;
+  color: var(--color-primary);
+  display: inline-block;
+  padding-bottom: 2px;
+  border-bottom: 1px solid currentColor;
+  cursor: pointer;
+  transition: all 0.5s; }
+  .btn-inline span {
+    margin-left: .3rem;
+    transition: marign-left .2s; }
+  .btn-inline:hover {
+    color: var(--color-grey-dark-1); }
+  .btn-inline:hover span {
+    display: inline-block;
+    margin-left: 1rem; }
+  .btn-inline:focus {
+    outline: none;
+    animation: pulsate 1s infinite; }
 
 @keyframes pulsate {
   0% {
@@ -311,12 +318,24 @@ body {
   margin-left: 4.5rem;
   background-color: var(--color-grey-light-2);
   box-shadow: var(--shadow-light);
-  padding: 3rem; }
+  padding: 3rem;
+  position: relative; }
+  .review::before {
+    content: "\201C";
+    position: absolute;
+    top: 7rem;
+    left: -.6rem;
+    font-size: 20rem;
+    font-family: "open-sans",sans-serif;
+    color: var(--color-white);
+    z-index: 1; }
   .review:not(:last-child) {
     margin-bottom: 4.5rem; }
   .review__text {
     margin-bottom: 2rem;
-    line-height: 1.6; }
+    line-height: 1.6;
+    position: relative;
+    z-index: 2; }
   .review__user {
     display: flex;
     align-items: center; }
@@ -339,7 +358,8 @@ body {
     font-size: 1.2rem; }
   .review__rating {
     margin-left: auto;
-    font-size: 2rem;
+    font-size: 2.2rem;
+    font-weight: 400;
     color: var(--color-primary); }
 
 .container {
@@ -387,4 +407,7 @@ body {
   line-height: 1.8; }
 
 .user-reviews {
-  flex: 1; }
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
